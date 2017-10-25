@@ -24,10 +24,9 @@ import java.util.List;
 public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getName();
 
-    private EditText metText;
-    private Button mbtSent;
+    // Firebase Ref
     private DatabaseReference mFirebaseRef;
-
+    // Apapter Ref
     private List<Chat> mChats;
     private RecyclerView mRecyclerView;
     private ChatAdapter mAdapter;
@@ -39,15 +38,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        metText = (EditText) findViewById(R.id.etText);
-//        mbtSent = (Button) findViewById(R.id.btSent);
         mRecyclerView = (RecyclerView) findViewById(R.id.rvChat);
         mChats = new ArrayList<>();
 
         mId = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //mRecyclerView.setItemAnimator(new SlideInOutLeftItemAnimator(mRecyclerView));
-        mAdapter = new ChatAdapter(mChats, mId);
+        mAdapter = new ChatAdapter(mChats);
         mRecyclerView.setAdapter(mAdapter);
 
         /**
@@ -55,14 +51,6 @@ public class MainActivity extends Activity {
          */
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         mFirebaseRef = database.getReference("riders");
-
-
-
-
-
-        /**
-         * Firebase - Receives message
-         */
 
 
         mFirebaseRef.addChildEventListener(new ChildEventListener() {
