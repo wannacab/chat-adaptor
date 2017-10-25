@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "591287103157",
+    "firebase_url": "https://ng-cab-book.firebaseio.com",
+    "project_id": "ng-cab-book",
+    "storage_bucket": "ng-cab-book.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591287103157:android:412564de7d0fa55c",
+        "android_client_info": {
+          "package_name": "com.gdgcampinas.chat_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591287103157-jglrr70qn9t0mce4nsr3nqs0c2mm0pkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUWuyeP2UVoU3e8X_OskIzLi1AZFEbgv0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
