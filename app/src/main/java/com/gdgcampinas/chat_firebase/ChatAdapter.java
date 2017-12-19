@@ -21,11 +21,11 @@ class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
     @Override
     public ChatAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v;
+        View view;
 
-        v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_rider, parent, false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_rider, parent, false);
 
-        return new ViewHolder(v);
+        return new ViewHolder(view);
     }
 
 
@@ -38,6 +38,7 @@ class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     }
     @Override
     public int getItemCount() {
+
         return mDataSet.size();
     }
 
